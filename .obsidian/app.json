@@ -1,0 +1,9 @@
+{
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "_assets",
+  "showLineNumber": true,
+  "showUnsupportedFiles": true,
+  "livePreview": true,
+  "promptDelete": true
+}
