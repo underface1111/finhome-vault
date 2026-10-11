@@ -1,7 +1,7 @@
 # 🏠 FinHome Ecosystem — Knowledge Hub & Architecture
 
 > **Single Source of Truth** cho toàn bộ hệ sinh thái FinHome (Vietnamese Fintech Mua Nhà).  
-> Vault này quản lý **Business Logic (Toán, Rules, Edge Cases)**, **Kiến trúc liên nền tảng (Web, App, Backend, AI)** và **Hợp đồng dữ liệu (API & Design System)**.
+> Vault này quản lý **Business Logic (Toán, Rules, Edge Cases)**, **Kiến trúc liên nền tảng (Web, App, Backend, AI)**, **Hợp đồng dữ liệu (API & Design System)** và **Khung thẩm định Quy hoạch BĐS**.
 
 ---
 
@@ -13,13 +13,13 @@
                             │   (Pure Logic & Moat)   │
                             └────────────┬────────────┘
                                          │
-     ┌──────────────────────┬────────────┴────────────┬──────────────────────┐
-     ▼                      ▼                         ▼                      ▼
-┌──────────────┐     ┌──────────────┐     ┌──────────────────────┐     ┌──────────────┐
-│  Web Portal  │     │  Mobile App  │     │   Backend Platform   │     │  AI & Ops    │
-│  (Next.js)   │     │ (Expo / RN)  │     │ (Serverless 33 Apps) │     │ (Automation) │
-│ [[Web-Docs]] │     │ [[App-Docs]] │     │  [[Backend-Vault]]   │     │ [[AI-Docs]]  │
-└──────────────┘     └──────────────┘     └──────────────────────┘     └──────────────┘
+     ┌──────────────────┬────────────────┼────────────────┬──────────────────┐
+     ▼                  ▼                ▼                ▼                  ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────────────┐
+│  Web Portal  │ │  Mobile App  │ │   Backend    │ │  AI & Ops    │ │ Quy hoạch & Thẩm định│
+│  (Next.js)   │ │ (Expo / RN)  │ │ (Serverless) │ │ (Automation) │ │  (Pháp lý & Bản đồ)  │
+│ [[Web-Docs]] │ │ [[App-Docs]] │ │[[Backend-V.]]│ │ [[AI-Docs]]  │ │ [[04-quyhoach-bds]]  │
+└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘ └──────────────────────┘
 ```
 
 ---
@@ -75,7 +75,21 @@ Các thư mục dưới đây được đồng bộ 2 chiều trực tiếp (`sy
 
 ---
 
-## 3. 🛡️ Quy ước Bất biến (Core Invariants & Moat)
+## 3. 🗺️ Quy hoạch & Thẩm định BĐS (`04-quyhoach-bds/`)
+
+Khung nghiệp vụ tra cứu quy hoạch, thẩm định pháp lý dự án và quỹ đất:
+
+- **Khung quy trình thẩm định**: [[04-quyhoach-bds/README|FinHome – Quy hoạch & thẩm định dự án BĐS]]
+  - **Flow 1**: Xác định vị trí và hồ sơ cần tra (số tờ, số thửa, tọa độ, bản đồ hiện trạng)
+  - **Flow 2**: Đọc chức năng đất và chỉ tiêu (mật độ, tầng cao, hệ số sử dụng, chỉ giới xây dựng)
+  - **Flow 3**: Đối chiếu hồ sơ dự án và khu vực (quy hoạch chi tiết 1/500, quyết định giao đất, GPXD)
+  - **Flow 4**: Xác minh và lập kết luận (hồ sơ có thẩm quyền, phân loại rủi ro/giới hạn)
+- **Nguồn dữ liệu thẩm định chính thức**: [[04-quyhoach-bds/sources/README|Official Sources & SHA256 Checksums]]
+- **Mindmap kinh doanh**: [[04-quyhoach-bds/mindmap_kinh_doanh_website|Mindmap Kinh doanh Website & Khách hàng]]
+
+---
+
+## 4. 🛡️ Quy ước Bất biến (Core Invariants & Moat)
 
 1. **Refusal Posture & Neutrality Moat**:
    - [[02-platforms/App-Docs/refusal-architecture|Refusal Architecture & Compliance]]
@@ -86,4 +100,4 @@ Các thư mục dưới đây được đồng bộ 2 chiều trực tiếp (`sy
    - Code phải khớp doc; nếu lệch → **fix code, không fix doc** (Doc là chuẩn nghiệp vụ).
    - Đơn vị tiền tệ: Chuẩn VND (`1,2 tỷ` / `31 triệu` / `10,5%/năm`).
 3. **Cập nhật ghi chú**:
-   - Mọi chỉnh sửa trong `02-platforms/` lập tức đồng bộ thẳng vào các repo code tương ứng (`finhome_backend`, `finhome_website`, `finhome_reactnative`, `finhome_ai_operation`).
+   - Mọi chỉnh sửa trong các thư mục platform (`02-platforms/`, `04-quyhoach-bds/`) lập tức đồng bộ thẳng vào các nguồn tương ứng.
