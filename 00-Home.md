@@ -1,25 +1,25 @@
 # 🏠 FinHome Ecosystem — Knowledge Hub & Architecture
 
 > **Single Source of Truth** cho toàn bộ hệ sinh thái FinHome (Vietnamese Fintech Mua Nhà).  
-> Vault này quản lý **Business Logic (Toán, Rules, Edge Cases)**, **Kiến trúc liên nền tảng (Web, App, AI)** và **Hợp đồng dữ liệu (API & Design System)**.
+> Vault này quản lý **Business Logic (Toán, Rules, Edge Cases)**, **Kiến trúc liên nền tảng (Web, App, Backend, AI)** và **Hợp đồng dữ liệu (API & Design System)**.
 
 ---
 
 ## 📌 BẢN ĐỒ ĐIỀU HÀNH HỆ SINH THÁI (MOC)
 
 ```
-                       ┌─────────────────────────┐
-                       │   01 - Business & Math  │
-                       │   (Pure Logic & Moat)   │
-                       └────────────┬────────────┘
-                                    │
-           ┌────────────────────────┼────────────────────────┐
-           ▼                        ▼                        ▼
-┌────────────────────┐   ┌────────────────────┐   ┌────────────────────┐
-│  Web Platform      │   │  Mobile Platform   │   │  AI & Operations   │
-│  (Next.js Portal)  │   │  (React Native)    │   │  (Agentic Workflows│
-│  [[Web-Docs/]]     │   │  [[App-Docs/]]     │   │  [[AI-Docs/]]      │
-└────────────────────┘   └────────────────────┘   └────────────────────┘
+                            ┌─────────────────────────┐
+                            │   01 - Business & Math  │
+                            │   (Pure Logic & Moat)   │
+                            └────────────┬────────────┘
+                                         │
+     ┌──────────────────────┬────────────┴────────────┬──────────────────────┐
+     ▼                      ▼                         ▼                      ▼
+┌──────────────┐     ┌──────────────┐     ┌──────────────────────┐     ┌──────────────┐
+│  Web Portal  │     │  Mobile App  │     │   Backend Platform   │     │  AI & Ops    │
+│  (Next.js)   │     │ (Expo / RN)  │     │ (Serverless 33 Apps) │     │ (Automation) │
+│ [[Web-Docs]] │     │ [[App-Docs]] │     │  [[Backend-Vault]]   │     │ [[AI-Docs]]  │
+└──────────────┘     └──────────────┘     └──────────────────────┘     └──────────────┘
 ```
 
 ---
@@ -45,9 +45,17 @@ Nơi định nghĩa các thuật toán, công thức tính toán và edge cases 
 
 ---
 
-## 2. 📱 Nền tảng Nổi bật (Cross-Platform Docs)
+## 2. 🚀 Các Nền tảng trong Hệ sinh thái (Cross-Platform Hub)
 
-Các thư mục tài liệu này được đồng bộ trực tiếp (`symlink`) với thư mục `docs/` của từng repo source code:
+Các thư mục dưới đây được đồng bộ 2 chiều trực tiếp (`symlink`) với từng repository:
+
+### ⚙️ Backend Platform (`finhome_backend`) — [[02-platforms/Backend-Vault/00-Home|Mở Backend Hub MOC]]
+- **Kiến trúc Serverless AWS**: [[02-platforms/Backend-Vault/01-Architecture/System Overview|AWS Serverless Topology]] · [[02-platforms/Backend-Vault/01-Architecture/Monorepo Structure|Monorepo Turbo Layout]]
+- **Danh mục 33 Microservices**: [[02-platforms/Backend-Vault/03-Services/Services Catalog|33 Lambda Services Catalog]]
+- **Cơ sở dữ liệu (Database)**: [[02-platforms/Backend-Vault/06-Database/Schema and Entities|PostgreSQL 11 Tables & ERD]] · [[02-platforms/Backend-Vault/06-Database/Migrations|Migrations Workflow]]
+- **Hợp đồng API & Xác thực**: [[02-platforms/Backend-Vault/07-API/OpenAPI and Endpoints|OpenAPI & Endpoints]] · [[02-platforms/Backend-Vault/07-API/Cognito Authentication|Cognito Authentication]]
+- **Phương pháp luận REFI & Compass**: [[02-platforms/Backend-Vault/02-Business-Domain/Compass Product|FinHome Compass Product]] · [[02-platforms/Backend-Vault/02-Business-Domain/REFI Methodology|REFI Methodology]]
+- **Tài liệu dự án**: [[02-platforms/Backend-Docs/README|Backend Docs Folder]] · [[02-platforms/Backend-Docs/api-contracts|API Contracts Detail]]
 
 ### 🌐 Web Portal (`finhome_website`) — [[02-platforms/Web-Docs/README|Mở Web Docs]]
 - **Calculator Suite**: [[02-platforms/Web-Docs/calculator-suite-status|Trạng thái bộ công cụ tính toán]]
@@ -78,4 +86,4 @@ Các thư mục tài liệu này được đồng bộ trực tiếp (`symlink`)
    - Code phải khớp doc; nếu lệch → **fix code, không fix doc** (Doc là chuẩn nghiệp vụ).
    - Đơn vị tiền tệ: Chuẩn VND (`1,2 tỷ` / `31 triệu` / `10,5%/năm`).
 3. **Cập nhật ghi chú**:
-   - Khi chỉnh sửa tài liệu trong `02-platforms/`, Git của các repo tương ứng (`finhome_website`, `finhome_reactnative`, `finhome_ai_operation`) sẽ tự động nhận thay đổi.
+   - Mọi chỉnh sửa trong `02-platforms/` lập tức đồng bộ thẳng vào các repo code tương ứng (`finhome_backend`, `finhome_website`, `finhome_reactnative`, `finhome_ai_operation`).
