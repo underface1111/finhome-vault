@@ -8,18 +8,26 @@
 ## 📌 BẢN ĐỒ ĐIỀU HÀNH HỆ SINH THÁI (MOC)
 
 ```
-                            ┌─────────────────────────┐
-                            │   01 - Business & Math  │
-                            │   (Pure Logic & Moat)   │
-                            └────────────┬────────────┘
+                                      ┌─────────────────────────┐
+                                      │   01 - Business & Math  │
+                                      │   (Pure Logic & Moat)   │
+                                      └────────────┬────────────┘
+                                                   │
+      ┌──────────────────┬────────────────┬────────┴───────┬──────────────────┬─────────────────┐
+      ▼                  ▼                ▼                ▼                  ▼                 ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────────┐ ┌──────────────┐
+│  Web Portal  │ │  Mobile App  │ │   Backend    │ │  AI & Ops    │ │Quy hoạch & Thẩm định│ │Content Pipeline│
+│ [[Web-Docs]] │ │ [[App-Docs]] │ │[[Backend-V.]]│ │ [[AI-Docs]]  │ │[[04-quyhoach-bds]]│ │[[Content-Pip.]]│
+└──────┬───────┘ └──────┬───────┘ └──────┬───────┘ └──────┬───────┘ └────────┬─────────┘ └──────┬───────┘
+       │                │                │                │                  │                  │
+       └────────────────┴────────────────┼────────────────┴──────────────────┴──────────────────┘
                                          │
-     ┌──────────────────┬────────────────┼────────────────┬──────────────────┐
-     ▼                  ▼                ▼                ▼                  ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────────────┐
-│  Web Portal  │ │  Mobile App  │ │   Backend    │ │  AI & Ops    │ │ Quy hoạch & Thẩm định│
-│  (Next.js)   │ │ (Expo / RN)  │ │ (Serverless) │ │ (Automation) │ │  (Pháp lý & Bản đồ)  │
-│ [[Web-Docs]] │ │ [[App-Docs]] │ │[[Backend-V.]]│ │ [[AI-Docs]]  │ │ [[04-quyhoach-bds]]  │
-└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘ └──────────────────────┘
+                 ┌───────────────────────┴───────────────────────┐
+                 ▼                                               ▼
+       ┌──────────────────┐                            ┌──────────────────┐
+       │  Motion Studio   │                            │    Ghép Trận     │
+       │[[Motion-Studio]] │                            │ [[Ghep-Tran-D.]] │
+       └──────────────────┘                            └──────────────────┘
 ```
 
 ---
@@ -69,6 +77,22 @@ Các thư mục dưới đây được đồng bộ 2 chiều trực tiếp (`sy
 ### 🤖 AI & Operation (`finhome_ai_operation`) — [[02-platforms/AI-Docs/architecture|Mở AI Docs]]
 - **Kiến trúc AI Operation**: [[02-platforms/AI-Docs/architecture|AI Operation Architecture & Flow]]
 - **Automation Superpowers**: [[02-platforms/AI-Docs/superpowers/specs-superpower|Specs Superpower]]
+
+### 📝 Content & Social Pipeline (`combo-product-blog`) — [[02-platforms/Content-Pipeline/THREADS_PLAYBOOK|Mở Content Playbook]]
+- **Playbooks & Routines**: [[02-platforms/Content-Pipeline/THREADS_PLAYBOOK|Threads Playbook]] · [[02-platforms/Content-Pipeline/PIPELINE_ENGINEERING_PLAYBOOK|Pipeline Playbook]] · [[02-platforms/Content-Pipeline/ANALYSIS_ROUTINE|Analysis Routine]]
+- **Learnings & Benchmark**: [[02-platforms/Content-Pipeline/RESEARCH_LEARNINGS|Research Learnings]] · [[02-platforms/Content-Pipeline/CHANNEL_BENCHMARK_2026-11-01|Channel Benchmark]] · [[02-platforms/Content-Pipeline/STYLE_SCOREBOARD|Style Scoreboard]]
+- **Kế hoạch & Kịch bản**: [[02-platforms/Content-Pipeline/WEEK_PLAN_2026-11-03|Week Plan]] · [[02-platforms/Content-Pipeline/THREADS_DRAFTS_2026-11-02|Threads Drafts]]
+
+### 🎬 Motion Studio (`finhome_motion_studio`) — [[02-platforms/Motion-Studio-Docs/creative-research|Mở Creative Research]]
+- **Nghiên cứu hình ảnh & Phong cách**: [[02-platforms/Motion-Studio-Docs/finance-news-visual-research|Finance News Visual]] · [[02-platforms/Motion-Studio-Docs/tool-film-style|Tool Film Style]] · [[02-platforms/Motion-Studio-Docs/screen-film-research|Screen Film Research]]
+- **Kịch bản & Storyboard video**: [[02-platforms/Motion-Studio-Films/ROTATION|Rotation Hub]] · [[02-platforms/Motion-Studio-Films/luong-20-trieu-can-ho-metro/SCRIPT_r1|Lương 20tr mua căn hộ Metro]] · [[02-platforms/Motion-Studio-Films/noxh-880-trieu-giai-phap/STORYBOARD|NOXH 880tr Storyboard]]
+
+### 🤝 Ghép Trận Outsource (`finhome_outsource/ghep-tran`) — [[02-platforms/Ghep-Tran-Docs/ghep-tran-chien-luoc|Mở Chiến lược Ghép Trận]]
+- **Chiến lược & Định hướng**: [[02-platforms/Ghep-Tran-Docs/ghep-tran-chien-luoc|Chiến lược Ghép Trận BĐS]] · [[02-platforms/Ghep-Tran-Docs/design-finhome-alignment-2026-11-02|FinHome Alignment]]
+- **UX & Thực địa**: [[02-platforms/Ghep-Tran-Docs/ux-review-2026-10-30|UX Review]] · [[02-platforms/Ghep-Tran-Docs/venue-trust-tiers-2026-11-03|Venue Trust Tiers]]
+
+### 📊 WiData Market Data (`widata-finhome-data`) — [[02-platforms/WiData-Pipeline/README|Mở WiData Overview]]
+- **Dữ liệu vĩ mô & BĐS**: [[02-platforms/WiData-Pipeline/README|WiData FinHome Data Pipeline]]
 
 ---
 
