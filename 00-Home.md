@@ -57,6 +57,9 @@ Nơi định nghĩa các thuật toán, công thức tính toán và edge cases 
 
 Các thư mục dưới đây được đồng bộ 2 chiều trực tiếp (`symlink`) với từng repository:
 
+### 🎯 Chiến lược Sản phẩm Số Toàn diện (BEP & SEP) — [[02-platforms/FinHome-Digital-Product-Strategy|Mở Ma trận Chiến lược BEP & SEP]]
+- **Khung chiến lược số**: [[02-platforms/FinHome-Digital-Product-Strategy|FinHome Digital Product Strategy: Ma Trận Toàn Diện Từ Cột G Đến K]] (Ma trận giải pháp 5 giai đoạn cho 6 nhóm đối tượng).
+
 ### ⚙️ Backend Platform (`finhome_backend`) — [[02-platforms/Backend-Vault/00-Home|Mở Backend Hub MOC]]
 - **Kiến trúc Serverless AWS**: [[02-platforms/Backend-Vault/01-Architecture/System Overview|AWS Serverless Topology]] · [[02-platforms/Backend-Vault/01-Architecture/Monorepo Structure|Monorepo Turbo Layout]]
 - **Danh mục 33 Microservices**: [[02-platforms/Backend-Vault/03-Services/Services Catalog|33 Lambda Services Catalog]]
